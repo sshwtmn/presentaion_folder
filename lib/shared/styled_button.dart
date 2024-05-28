@@ -1,43 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_presentaion/shared/theme.dart';
+
 
 class StyledButton extends StatelessWidget {
-  const StyledButton({super.key, required this.onPressed, required this.child});
+  const StyledButton({
+    super.key, 
+    required this.onPressed,
+    required this.child,
+  });
 
-  final void Function() onPressed;
+  final Function() onPressed;
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style: TextButton.styleFrom(
-        backgroundColor: Colors.blue[500],
-        foregroundColor: Colors.white,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5))
-        )
-      ),
-      onPressed: onPressed, 
-      child: child
-    );
-  }
-}
-
-class StyledButtonText extends StatelessWidget {
-  const StyledButtonText(this.text, {super.key});
-
-  final String text;
-
-   @override
-  Widget build(BuildContext context) {
-    return Text(text, style: GoogleFonts.poppins(
-        textStyle: const TextStyle(
-          color: Colors.white, 
-          fontSize: 14, 
-          fontWeight: FontWeight.bold,
-          letterSpacing: 0.8,
+      onPressed: onPressed,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [AppColors.primaryColor, AppColors.primaryAccent],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(5)),
         ),
-      )
+        child: child,
+      ),
     );
   }
 }
+

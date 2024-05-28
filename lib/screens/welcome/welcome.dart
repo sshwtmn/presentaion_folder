@@ -1,6 +1,6 @@
-import 'package:flutter_auth_tut/screens/welcome/sign_in.dart';
-import 'package:flutter_auth_tut/screens/welcome/sign_up.dart';
-import 'package:flutter_auth_tut/shared/styled_text.dart';
+import 'package:flutter_presentaion/screens/welcome/sign_in.dart';
+import 'package:flutter_presentaion/screens/welcome/sign_up.dart';
+import 'package:flutter_presentaion/shared/styled_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,24 +19,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const StyledAppBarText('Flutter Auth'),
-        backgroundColor: Colors.blue[500],
-        centerTitle: true,
+        title: const StyledTitle('Braids creation'),
       ),
       body: SingleChildScrollView(
         child: Container(
+
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
           child:  Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const StyledHeading('Welcome.'),
-        
+              const SizedBox(height: 300,),
+              const StyledHeading('Welcome'),
               // sign up screen
               if(isSignUpForm)
                 Column(
                   children: [
                     const SignUpForm(),
-                    const StyledBodyText("Already have an acoount?"),
+                    const StyledText("Already have an account?"),
                     TextButton(
                         onPressed: () {
                           setState(() {
@@ -52,7 +51,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Column(
                   children: [
                     const SignInForm(),
-                    const StyledBodyText("Need an account?"),
+                    const StyledText("Need an account?"),
                     TextButton(
                         onPressed: () {
                           setState(() {

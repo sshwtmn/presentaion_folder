@@ -1,16 +1,18 @@
-# flutter_auth_tut
+# flutter_presentaion
 
 A new Flutter project.
 
 ## Getting Started
+Good day, Anna.
 
-This project is a starting point for a Flutter application.
+Here are what I've implemented by now.
 
-A few resources to get you started if this is your first Flutter project:
+Login and Register pages.
+Google Auth.
+Connection with fireStore.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I'm going to create an Application with barber services,
+Braids creation.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Thinking
+

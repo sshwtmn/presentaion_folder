@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth_tut/providers/auth_provider.dart';
-import 'package:flutter_auth_tut/screens/profile/profile.dart';
-import 'package:flutter_auth_tut/screens/welcome/welcome.dart';
+import 'package:flutter_presentaion/providers/auth_provider.dart';
+import 'package:flutter_presentaion/screens/profile/main_menu.dart';
+import 'package:flutter_presentaion/screens/welcome/welcome.dart';
 
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_presentaion/shared/theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'firebase_options.dart';
 import 'models/app_user.dart';
@@ -15,11 +16,10 @@ import 'models/app_user.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  );
 
+  );
   runApp(const ProviderScope(
       child: MyApp()));
 }
@@ -32,10 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: primaryTheme,
       home:  Consumer(
           builder: (context, ref, child) {
             final AsyncValue<AppUser?> user = ref.watch(authProvider);

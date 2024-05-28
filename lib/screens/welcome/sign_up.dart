@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth_tut/services/auth_service.dart';
-import 'package:flutter_auth_tut/shared/styled_button.dart';
-import 'package:flutter_auth_tut/shared/styled_text.dart';
+import 'package:flutter_presentaion/services/auth_service.dart';
+import 'package:flutter_presentaion/shared/styled_button.dart';
+
+import '../../shared/styled_text.dart';
+
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -28,7 +30,7 @@ class _SignUpFormState extends State<SignUpForm> {
         child:  Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Center(child: StyledBodyText("Sign up for a new account")),
+            const Center(child: StyledText("Sign up for a new account")),
             const SizedBox(height: 16.0),
             //email
             TextFormField(
@@ -83,7 +85,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
                   }
                 },
-                child: const StyledBodyText("Sign Up"))
+                child: const StyledText("Sign Up"))
           ],
         ),
       ),

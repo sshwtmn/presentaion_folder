@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:flutter_auth_tut/services/auth_service.dart";
+import "package:flutter_presentaion/services/auth_service.dart";
 
 import "../../shared/styled_button.dart";
 import "../../shared/styled_text.dart";
@@ -28,7 +28,7 @@ class _SignInFormState extends State<SignInForm> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Center(child: StyledBodyText("Sign In into your account")),
+            const Center(child: StyledText("Sign In into your account")),
             const SizedBox(height: 16.0),
             //email
             TextFormField(
@@ -84,7 +84,7 @@ class _SignInFormState extends State<SignInForm> {
                     }
                   }
                 },
-                child: const StyledBodyText("Sign In"))
+                child: const StyledText("Sign In"))
           ],
         ),
       ),
